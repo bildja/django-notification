@@ -300,7 +300,7 @@ def send_now(users, label, extra_context=None, on_site=True):
         }, context)
 
         html_body = render_to_string('notification/email_body.html', {
-            'message': messages['full.txt'],
+            'message': messages['full.html'],
         }, context)
 
         notice = Notice.objects.create(user=user, message=messages['notice.html'],
